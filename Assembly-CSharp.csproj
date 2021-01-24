@@ -44,7 +44,7 @@
      <Compile Include="Assets\Scripts\DamageableZone.cs" />
      <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Scripts\HealthCollectable.cs" />
-     <Compile Include="Assets\Scripts\Inputs\MouseInput.cs" />
+     <Compile Include="Assets\Scripts\Inputs\MovementInput.cs" />
      <Compile Include="Assets\Scripts\NonPlayableCharacter.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\RubyController.cs" />

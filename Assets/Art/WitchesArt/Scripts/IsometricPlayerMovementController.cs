@@ -11,19 +11,21 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
     Rigidbody2D rbody;
 
+    Vector2 movementVector;
     float horizontalInput;
     float verticalInput;
+    bool lastActionWasClick;
 
     [SerializeField] private Tilemap map;
     private Vector3 destination;
     // public GridLayout grid;
     Camera mainCamera;
 
-    MouseInput mouseInput;
+    MovementInput movementInput;
 
     private void Awake()
     {
-        mouseInput = new MouseInput();
+        movementInput = new MovementInput();
         rbody = GetComponent<Rigidbody2D>();
         mainCamera = Camera.main;
         isoRenderer = GetComponentInChildren<IsometricCharacterRenderer>();
@@ -31,22 +33,35 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
     private void OnEnable()
     {
-        mouseInput.Enable();
+        movementInput.Enable();
     }
     private void OnDisable()
     {
-        mouseInput.Disable();
+        movementInput.Disable();
 
     }
     private void Start()
     {
-        mouseInput.Mouse.MouseClick.performed += (_) => MouseClick();
+        movementInput.Mouse.MouseClick.performed += (_) => MouseClick();
+        movementInput.Keyboard.Movement.performed += (context) =>
+        {
+            lastActionWasClick = false;
+            movementVector = context.ReadValue<Vector2>();
+            Debug.Log("performed");
+        };
+        movementInput.Keyboard.Movement.canceled += (_) =>
+        {
+            movementVector = Vector2.zero;
+            Debug.Log("cancelled");
+        };
+
         destination = transform.position;
     }
 
     private void MouseClick()
     {
-        Vector2 mousePosition = mouseInput.Mouse.MousePosition.ReadValue<Vector2>();
+
+        Vector2 mousePosition = movementInput.Mouse.MousePosition.ReadValue<Vector2>();
         mousePosition = mainCamera.ScreenToWorldPoint(mousePosition);
         // Make sure we are clicking the cell, not the map not the screen;
         Vector3Int gridPosition = map.WorldToCell(mousePosition);
@@ -54,13 +69,12 @@ public class IsometricPlayerMovementController : MonoBehaviour
         {
             destination = mousePosition;
         }
+        lastActionWasClick = true;
     }
     private void Update()
     {
         // horizontalInput = Input.GetAxis("Horizontal");
         // verticalInput = Input.GetAxis("Vertical");
-
-
     }
 
     // Update is called once per frame
@@ -68,32 +82,20 @@ public class IsometricPlayerMovementController : MonoBehaviour
     {
         Vector2 currentPos = rbody.position;
 
-        Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
+        Vector2 inputVector = new Vector2(movementVector.x, movementVector.y);
         inputVector = Vector2.ClampMagnitude(inputVector, 1);
-
-        // Below is calculating the speed based on the tile;
-        // // TileBase tileBase = tilemap.GetTile(new Vector3Int((int)rbody.position.x, (int)rbody.position.y, 0));
-        // string tileName = tileBase.name;
-        // Debug.Log(tileName);
-        // float speed = 50;
-        // if (tileName.Contains("ice"))
-        // {
-        //     speed = 10;
-        // }
-        // Vector2 movement_vector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        // rbody.MovePosition(rbody.position + movement_vector * Time.deltaTime * speed);
-
-        // Get current tile;
-        // Vector2Int cellPosition = (Vector2Int)grid.WorldToCell(new Vector3(currentPos.x, currentPos.y, 0f));
 
         Vector2 movement = inputVector * movementSpeed;
         Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
-        isoRenderer.SetDirection(movement);
+        // isoRenderer.SetDirection(movement);
+        rbody.MovePosition(newPos);
 
 
-
-        // rbody.MovePosition(newPos);
-        if (Vector3.Distance(rbody.position, destination) > 0.1f)
+        // Only line needed for mouse movement in FixedUpdate;
+        if (lastActionWasClick && Vector3.Distance(rbody.position, destination) > 0.1f)
+        {
+            Debug.Log("clickmoveee");
             rbody.position = Vector3.MoveTowards(rbody.position, destination, movementSpeed * Time.deltaTime);
+        }
     }
 }
