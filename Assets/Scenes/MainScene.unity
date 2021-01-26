@@ -145,12 +145,12 @@ PrefabInstance:
     - target: {fileID: 3339481645408498932, guid: 8b19164f70ba4464c9c0d0b63db489b1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.877
+      value: -10.69
       objectReference: {fileID: 0}
     - target: {fileID: 3339481645408498932, guid: 8b19164f70ba4464c9c0d0b63db489b1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.339
+      value: -5.29
       objectReference: {fileID: 0}
     - target: {fileID: 3339481645408498932, guid: 8b19164f70ba4464c9c0d0b63db489b1,
         type: 3}
@@ -19632,7 +19632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAIIexV2sf+cQIAABgFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMly4jAQ/RVK54GyCUuY24xDSA5ZKmQqF19kS8YqZMmlJUBS/Pt0yzb2MFyQ3+vl9VPb30QoW/PcabMxgj1pxsnPEXm0uuLOiBxB8mPURz3wI91ptRVfvAv+EMyVGERDzBt1QgMeY1pX55faSQxeRJMIfze3wHolCm2qNdvxRFtngS+otBwoox2WUQB9j8gR/sazOeAnOE2XEZy+4LSKRmc45lw5bgahy8l8Nl2GHpgwXkzmi5tVPG/TmiyvckmrmjOcpU+eRl2bJkzBlG1ENJliNy2lsK024k51MCGhtfUwIgQwQWHoICiaoIaSi13psOQw/aUoLEcUGxp6uhMG3Gvqkt+6sbSidt9o+6TSY6fpfBF0NUWf/uPHcaALo6uHrm8cYQ9Xinz/Rk85tW5g9RC+66XHwaIDlXuaSf5RcvWsN0Z7xYB0xmOqt3x61z9eRktKnu97vJF6Bfq697yzvLtXnOEcpj8mUlRZcHLWAFupg+MrDOYGbucRBIdlsW0JQFHFH8vf6W64VS1xL4x1QLVTKpSXaW8wlKyDZziNd4k2ige4FV1zRaU7vUIZd32FV9yg7RVzT/FFapu3XPd+XKUEuI+PoivqVR8ul2VLfXjitnzxTgrFe9FIPINPiVaq2bChJ13a1puC5oO0nRfs39UixWKWs3iRs2WczVerbJzFN6soo3lRsNtlsYxI2D2hYE4qXxuhrT1wa6ovrmDPsCJ+X0YbQ+uw7czQw0Z8VXpguVCF3uaGc/XSVLgI5waawJvJ1kyAQVvunFDhvsl3SqTO95yll0JpmHR9dIamfZWU1OJTO0RSkoTvSErO5PwXUEsDBBQAAAgIAAAIIewmPYPrbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrRSmplJcoqhWXKKuWGSqaVlkm6SobGlQVJiclpaioV5mrmBUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAIIexV2sf+cQIAABgFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAIIewmPYPrbQAAAHgAAAAJACQAAAAAAAAAAAAAAL4CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAdgMAAAAA
+    dataString: UEsDBBQAAAgIAAAIIezBqQLobwIAABUFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMzoWxAZvQWwuE5JCPCe3k4ossrbEGW/JIcoBk+O9dyTZ26fSEeLv79u3Tyl9ESFMBs0pvteBPigP5PiKPRpVgtWAOJN9GfdYDnOheyZ34hC75XXCbuyTqc96oFQrx0JV1PD/kvnDJ0XyymEWxi9VSZEqXG76HlTLWYDSjhQEMaWUdiUToa0RO+DOeR4if8TRdBHj6xNMyGF3wyEBa0IPUu0kUx1E8bQvGi0kQR7O7tqopqiUraFkBd4P0tbOuyyzyaRJHbDOCiRPNVFEI00oj9lx5B3ZVDhqcBVxQHNjLCSczBHIQ+9w63cPqlywz4FA3i6bntdDoXENLfqrGzpKaQyPtgxa1azSNYi+rIX36Jz4OfTjTqnzo+oaB62FzwQ5v9MyosQOjh/B6IN07dKTFgaYFvOcgn9VWq1pyDFpdu9LawHTd/72OtsqBHXq8kXoD1lVvedA63t2qm+Hipz+tClGm3vp5A+wK5Q1fumTQeDmPKNivimkpEHUqfhv4RffDnWoD90Ibi6F2SunkparWLpVsvGdumtqulJaghwwVSFrY8yvy2Ns7vIn9v+qeulfUdm9j3eO4KfFwnx8EN6FXdbzelsnV8QlM/lLbQkjorXaBZzRqpaRsVmw4Ule2q3VG2aBsXwv+926RLJ4zHsaML8I0Wi7TcRrOlkFKWZbxu0W2CIhfPiFxTlq8NkJbe/DaZE8ucdEco/u4jLaaVn7duabHrfgslekzhczUjmkA+dIwXIWDxib4MvmGCzRoB9YK6S+cfCWkUOwAPLkSJX7SzclqmvQsCanEh7IOScjKf0YSciGXP1BLAwQUAAAICAAACCHsJj2D620AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNVRUEovSizIKAaKGII4pZkpIHa0UpqZSXKKoVlyirlhkqmlZZJukqGxpUFSYnJaWoqFeZq5gVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAACCHswakC6G8CAAAVBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAACCHsJj2D620AAAB4AAAACQAkAAAAAAAAAAAAAAC8AgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAHQDAAAAAA==
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -19733,7 +19733,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1933677397}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.28, y: -11.261, z: 0}
+  m_LocalPosition: {x: -9.22, y: -6.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5808509038235646087}
@@ -19758,7 +19758,7 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 2
+  maxSpeed: 3
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
