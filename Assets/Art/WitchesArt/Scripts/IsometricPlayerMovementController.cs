@@ -87,13 +87,16 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
         Vector2 movement = inputVector * movementSpeed;
         Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
-        // isoRenderer.SetDirection(movement);
+        if (!lastActionWasClick) isoRenderer.SetDirection(movement);
         rbody.MovePosition(newPos);
 
 
         // Only line needed for mouse movement in FixedUpdate;
         if (lastActionWasClick && Vector3.Distance(rbody.position, destination) > 0.1f)
         {
+            isoRenderer.SetDirection((Vector2)destination - rbody.position);
+
+
             Debug.Log("clickmoveee");
             rbody.position = Vector3.MoveTowards(rbody.position, destination, movementSpeed * Time.deltaTime);
         }

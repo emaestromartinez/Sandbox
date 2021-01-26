@@ -233,6 +233,9 @@
     <Reference Include="UnityEditor">
         <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+        <HintPath>/Users/eduardmaestro/Documents/Unity/Sandbox/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
     <Reference Include="netstandard">
         <HintPath>/Applications/Unity/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
     </Reference>
@@ -664,6 +667,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{67d88051-6ecd-bd7d-831f-7301c0352fbd}</Project>
+      <Name>AstarPathfindingProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{2a718dc4-7fe6-21be-3512-1f9dfee3b571}</Project>
+      <Name>PackageToolsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{ea9d9c90-8d5c-ee55-8667-e6cd781c56e7}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
